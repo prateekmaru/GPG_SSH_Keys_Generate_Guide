@@ -4,10 +4,11 @@ updated: 2022-08-12 17:22:05Z
 created: 2022-08-12 17:01:39Z
 ---
 # GPG Key && SSH Key Generate Guide  For Git
+
 # For GPG Key
 
-  prateek@Arc13x~/Desktop 
-❯ gpg --version
+<pre><span style="background-color:#222222"><font color="#666666">  prateek@Arc13x </font></span><span style="background-color:#444444"><font color="#CCCCCC"> ~/Desktop </font></span>
+<font color="#007ACC">❯ </font>gpg --version
 gpg (GnuPG) 2.3.7
 libgcrypt 1.10.1-unknown
 Copyright (C) 2021 Free Software Foundation, Inc.
@@ -23,8 +24,8 @@ Cipher: IDEA, 3DES, CAST5, BLOWFISH, AES, AES192, AES256, TWOFISH,
 AEAD: EAX, OCB
 Hash: SHA1, RIPEMD160, SHA256, SHA384, SHA512, SHA224
 Compression: Uncompressed, ZIP, ZLIB, BZIP2
-  prateek@Arc13x~/Desktop 
-❯ gpg --full-generate-key
+<span style="background-color:#222222"><font color="#666666">  prateek@Arc13x </font></span><span style="background-color:#444444"><font color="#CCCCCC"> ~/Desktop </font></span>
+<font color="#007ACC">❯ </font>gpg --full-generate-key
 gpg (GnuPG) 2.3.7; Copyright (C) 2021 Free Software Foundation, Inc.
 This is free software: you are free to change and redistribute it.
 There is NO WARRANTY, to the extent permitted by law.
@@ -34,7 +35,7 @@ Please select what kind of key you want:
    (2) DSA and Elgamal
    (3) DSA (sign only)
    (4) RSA (sign only)
-   (9) ECC (sign and encrypt) \*default\*
+   (9) ECC (sign and encrypt) *default*
   (10) ECC (sign only)
   (14) Existing key from card
 Your selection? 1
@@ -57,7 +58,7 @@ Real name: Prateek Maru
 Email address: prateekmaru@yahoo.com
 Comment: 
 You selected this USER-ID:
-    "Prateek Maru &lt;prateekmaru@yahoo.com&gt;"
+    &quot;Prateek Maru &lt;prateekmaru@yahoo.com&gt;&quot;
 
 Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? O
 We need to generate a lot of random bytes. It is a good idea to perform
@@ -68,17 +69,17 @@ We need to generate a lot of random bytes. It is a good idea to perform
 some other action (type on the keyboard, move the mouse, utilize the
 disks) during the prime generation; this gives the random number
 generator a better chance to gain enough entropy.
-gpg: directory '/home/prateek/.gnupg/openpgp-revocs.d' created
-gpg: revocation certificate stored as '/home/prateek/.gnupg/openpgp-revocs.d/BBB6F6FD71C51044EAE9B8152A0C86CF17FFB466.rev'
+gpg: directory &apos;/home/prateek/.gnupg/openpgp-revocs.d&apos; created
+gpg: revocation certificate stored as &apos;/home/prateek/.gnupg/openpgp-revocs.d/BBB6F6FD71C51044EAE9B8152A0C86CF17FFB466.rev&apos;
 public and secret key created and signed.
 
-pub   rsa4096 2022-08-12 \[SC\]
+pub   rsa4096 2022-08-12 [SC]
       BBB6F6FD71C51044EAE9B8152A0C86CF17FFB466
 uid                      Prateek Maru &lt;prateekmaru@yahoo.com&gt;
-sub   rsa4096 2022-08-12 \[E\]
+sub   rsa4096 2022-08-12 [E]
 
- 1m 34.158s  prateek@Arc13x ~/Desktop 
-❯ gpg --armor --export BBB6F6FD71C51044EAE9B8152A0C86CF17FFB466
+<span style="background-color:#007ACC"><font color="#222222"> 1m 34.158s </font></span><span style="background-color:#222222"><font color="#666666">  prateek@Arc13x </font></span><span style="background-color:#444444"><font color="#CCCCCC"> ~/Desktop </font></span>
+<font color="#007ACC">❯ </font>gpg --armor --export BBB6F6FD71C51044EAE9B8152A0C86CF17FFB466
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
 mQINBGL2g7wBEACkkm5SNuB2atmpXOWRkZ5TJs+oyM0p97MqEhFOxtaE2OWHIWhi
@@ -131,65 +132,62 @@ zK8zurLgafNlizYkSAO66GPqHwmjVuHDsodor1Ft9lJnyPQfPye6+7sLtuW/zcsY
 51kY
 =uojs
 -----END PGP PUBLIC KEY BLOCK-----
-  prateek@Arc13x~/Desktop 
-❯ git config --global user.signingkey 2A0C86CF17FFB466
-  prateek@Arc13x~/Desktop 
-❯ git config --global commit.gpgsign true
-  prateek@Arc13x~/Desktop 
-❯ git config --global gpg.program gpg
-  prateek@Arc13x~/Desktop 
-❯ export GPG_TTY=$(tty)
-  prateek@Arc13x~/Desktop 
-❯ 
-
-* * *
+<span style="background-color:#222222"><font color="#666666">  prateek@Arc13x </font></span><span style="background-color:#444444"><font color="#CCCCCC"> ~/Desktop </font></span>
+<font color="#007ACC">❯ </font>git config --global user.signingkey 2A0C86CF17FFB466
+<span style="background-color:#222222"><font color="#666666">  prateek@Arc13x </font></span><span style="background-color:#444444"><font color="#CCCCCC"> ~/Desktop </font></span>
+<font color="#007ACC">❯ </font>git config --global commit.gpgsign true
+<span style="background-color:#222222"><font color="#666666">  prateek@Arc13x </font></span><span style="background-color:#444444"><font color="#CCCCCC"> ~/Desktop </font></span>
+<font color="#007ACC">❯ </font>git config --global gpg.program gpg
+<span style="background-color:#222222"><font color="#666666">  prateek@Arc13x </font></span><span style="background-color:#444444"><font color="#CCCCCC"> ~/Desktop </font></span>
+<font color="#007ACC">❯ </font>export GPG_TTY=$(tty)
+<span style="background-color:#222222"><font color="#666666">  prateek@Arc13x </font></span><span style="background-color:#444444"><font color="#CCCCCC"> ~/Desktop </font></span>
+<font color="#007ACC">❯ </font></pre>
 
 # For SSH Key
 
-  prateek@Arc13x~/Desktop 
-❯ ls -al ~/.ssh 
-ls: cannot access '/home/prateek/.ssh': No such file or directory
- 2  prateek@Arc13x ~/Desktop 
-❯ ssh-keygen -t rsa -b 4096 -C "prateekmaru@yahoo.com"  
+<pre><span style="background-color:#222222"><font color="#666666">  prateek@Arc13x </font></span><span style="background-color:#444444"><font color="#CCCCCC"> ~/Desktop </font></span>
+<font color="#007ACC">❯ </font>ls -al ~/.ssh 
+ls: cannot access &apos;/home/prateek/.ssh&apos;: No such file or directory
+<span style="background-color:#880000"><font color="#FF8888"> 2 </font></span><span style="background-color:#222222"><font color="#666666">  prateek@Arc13x </font></span><span style="background-color:#444444"><font color="#CCCCCC"> ~/Desktop </font></span>
+<font color="#007ACC">❯ </font>ssh-keygen -t rsa -b 4096 -C &quot;prateekmaru@yahoo.com&quot;  
 Generating public/private rsa key pair.
 Enter file in which to save the key (/home/prateek/.ssh/id_rsa): 
-Created directory '/home/prateek/.ssh'.
+Created directory &apos;/home/prateek/.ssh&apos;.
 Enter passphrase (empty for no passphrase): 
 Enter same passphrase again: 
 Your identification has been saved in /home/prateek/.ssh/id_rsa
 Your public key has been saved in /home/prateek/.ssh/id_rsa.pub
 The key fingerprint is:
 SHA256:UhvrJjH2lWgzpawcDxDxFFpPeZzvGahQd48kik89NRI prateekmaru@yahoo.com
-The key's randomart image is:
-+---\[RSA 4096\]----+
+The key&apos;s randomart image is:
++---[RSA 4096]----+
 |    o.+..oEo     |
-|     \* oo B =    |
+|     * oo B =    |
 |    o .o+=.O +   |
 |     .oooB+.+ .  |
 |      B+S.oo o   |
 |     o %o+  o    |
-|      \+ =        |
+|      + =        |
 |       o         |
 |                 |
-+----\[SHA256\]-----+
- 1m 2.237s  prateek@Arc13x ~/Desktop 
-❯  ls -al ~/.ssh        
++----[SHA256]-----+
+<span style="background-color:#007ACC"><font color="#222222"> 1m 2.237s </font></span><span style="background-color:#222222"><font color="#666666">  prateek@Arc13x </font></span><span style="background-color:#444444"><font color="#CCCCCC"> ~/Desktop </font></span>
+<font color="#007ACC">❯ </font> ls -al ~/.ssh        
 total 12K
-drwx------. 1 prateek prateek   32 Aug 12 22:24 **.**
-drwx------. 1 prateek prateek  784 Aug 12 22:23 **..**
+drwx------. 1 prateek prateek   32 Aug 12 22:24 <font color="#2A7BDE"><b>.</b></font>
+drwx------. 1 prateek prateek  784 Aug 12 22:23 <font color="#2A7BDE"><b>..</b></font>
 -rw-------. 1 prateek prateek 3.4K Aug 12 22:24 id_rsa
 -rw-r--r--. 1 prateek prateek  747 Aug 12 22:24 id_rsa.pub
-  prateek@Arc13x~/Desktop 
-❯ eval "$(ssh-agent -s)"
+<span style="background-color:#222222"><font color="#666666">  prateek@Arc13x </font></span><span style="background-color:#444444"><font color="#CCCCCC"> ~/Desktop </font></span>
+<font color="#007ACC">❯ </font>eval &quot;$(ssh-agent -s)&quot;
 Agent pid 19328
-  prateek@Arc13x~/Desktop 
-❯ ssh-add ~/.ssh/id_rsa 
+<span style="background-color:#222222"><font color="#666666">  prateek@Arc13x </font></span><span style="background-color:#444444"><font color="#CCCCCC"> ~/Desktop </font></span>
+<font color="#007ACC">❯ </font>ssh-add ~/.ssh/id_rsa 
 Enter passphrase for /home/prateek/.ssh/id_rsa: 
 Identity added: /home/prateek/.ssh/id_rsa (prateekmaru@yahoo.com)
- 9.533s  prateek@Arc13x ~/Desktop 
-❯ clip < ~/.ssh/id_rsa.pub
-
-* * *
+<span style="background-color:#007ACC"><font color="#222222"> 9.533s </font></span><span style="background-color:#222222"><font color="#666666">  prateek@Arc13x </font></span><span style="background-color:#444444"><font color="#CCCCCC"> ~/Desktop </font></span>
+<font color="#007ACC">❯ </font>clip &lt; ~/.ssh/id_rsa.pub
+</pre>
 
 > ### For Workspace GPG Key Must Required for each commit verification
 > 
@@ -199,5 +197,8 @@ Identity added: /home/prateek/.ssh/id_rsa (prateekmaru@yahoo.com)
 > `This Best Practices for  git users`
 > 
 > Each Keys Are Unique // You cant copy my key xD
+> Make Sure You Added GPG Key ID with your git config 
+<pre><font color="#007ACC">❯ </font>git config --global user.signingkey 2A0C86CF17FFB466
+</pre>
 
 ![c77e2697d60f1016ef97c2f090502d7b.png](/_resources/c77e2697d60f1016ef97c2f090502d7b.png)
