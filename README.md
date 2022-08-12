@@ -202,3 +202,8 @@ Identity added: /home/prateek/.ssh/id_rsa (prateekmaru@yahoo.com)
 </pre>
 
 ![c77e2697d60f1016ef97c2f090502d7b.png](/_resources/c77e2697d60f1016ef97c2f090502d7b.png)
+
+#  GnuPG Key Varification Commit
+<pre>2A0C86CF17FFB466</pre>
+![image](https://user-images.githubusercontent.com/47496067/184414587-aab67153-e23a-43ec-8e71-1cc10435d31a.png)
+
